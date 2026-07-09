@@ -1,0 +1,13 @@
+[project]
+name = "vivappproject"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.128.8",
+    "uvicorn[standard]>=0.39.0",
+    "sqlalchemy>=2.0.51",
+    "psycopg[binary]>=3.2.13",
+    "pydantic>=2.13.4",
+    "pydantic-settings>=2.11.0",
+    "python-dotenv>=1.2.1",
+]
