@@ -4,6 +4,7 @@ from sqlalchemy import text
 from sqlalchemy.orm import Session
 
 from app.routers.words import router as words_router
+from app.routers.statistics import router as statistics_router
 
 from app.db import get_db
 
@@ -17,6 +18,7 @@ app.add_middleware(
 )
 
 app.include_router(words_router)
+app.include_router(statistics_router)
 
 @app.get("/")
 def read_root():
