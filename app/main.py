@@ -3,6 +3,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy import text
 from sqlalchemy.orm import Session
 
+from app.routers.words import router as words_router
+
 from app.db import get_db
 
 app = FastAPI()
@@ -14,6 +16,7 @@ app.add_middleware(
     allow_headers=["*"]
 )
 
+app.include_router(words_router)
 
 @app.get("/")
 def read_root():
